@@ -1,0 +1,72 @@
+<script>
+$(function() {
+    /*OS 8/12/14 - Show/Hide Pickup/Delivery Areas on search locations page*/
+    $(".order-option-selections input[name='order-option-selection']").click(function() {
+
+        if ($('input:radio[name=order-option-selection]:checked').val() == "pickup"){
+            $('.order-option-criteria.pickup').show();
+            $('.order-option-criteria.delivery').hide();
+        } else if ($('input:radio[name=order-option-selection]:checked').val() == "delivery"){
+            $('.order-option-criteria.pickup').hide();
+            $('.order-option-criteria.delivery').show();
+        }
+    });
+
+    /*Adds/Removes class based on mouseenter and mouseleave- reusable*/
+    function inputAction(x, y, z){
+        $(x).on('mouseenter', function(){
+            $(y).addClass(z);
+        });
+        $(x).on('mouseleave', function(){
+            $(y).removeClass(z);
+        });
+    }
+    /*Adds zip code/city text to input fields on search locations form*/
+    inputAction('.float-left.ui-res-locations-zip-code-container .ui-res-input-text', '.float-left.ui-res-locations-zip-code-container', 'exTxt');
+    inputAction('.float-left.ui-res-locations-city-container .ui-res-input-text', '.float-left.ui-res-locations-city-container', 'exTxt');
+
+    /*Modification based on User signed in*/
+    if($('.ui-res-profile-login-loggedin-msg').length){
+	/*If user is signed in the sign out text will show in the header on the home page and also shows hidden custom text and btns*/	
+	$('.sitehome .ui-res-header-account-and-cart-navigation-sign-in, .custom-loggedin-txt, .custom-loggedin-btn-container, .custom-loggedin-txt').show();
+	$('.custom-body-left').hide();
+	$('.custom-body-right').addClass('loggedin-mode');
+        $('.custom-loggedin-txt-container').css('width','70%');
+    }
+  /*Menu Page - adds on click to go to specific product category*/
+  $('.menu-list-item.ui-res-menu-list-display-cat-as-btns').each(function(){
+	var x = $(this).attr('data-productid');
+	$('#menu-item-' + x).on('click',function(){window.location = '../landing/menu.jsp?CAT1=' + x;});
+  });
+  /*For the custom menu component. Show only when on menu page*/
+  if ($('.selected-menu-category-item-title').text() != 'OUR MENU')
+   { 
+     $('.custom-menu').show();
+   }
+   /*Adds a class to Dropdown menu component to change sprite category image*/
+   var activeMenuItemTD = $('.ui-res-dropdown-menu-selected-category-title-container td:first-child, .selected-menu-category-item-title').text().toLowerCase();
+   $('.ui-res-dropdown-menu-selected-category-title-container td:first-child, .selected-menu-category-item-title').addClass(activeMenuItemTD);
+   
+   /*changes the image src of the product-img-container custom component based on the title*/
+    var activeMenuItem = $('.ui-res-dropdown-menu-selected-category-title-container td:first-child').text();
+    var menuArrayMap = {
+        'Burgers' : '//imageserver.microswebhotel.com/global_tenant/get/w/256/h/256/burgericon.image?',
+        'Salads' : '//imageserver.microswebhotel.com/global_tenant/get/w/256/h/256/salad-icon.image?',
+        'Appetizers' : '//imageserver.microswebhotel.com/global_tenant/get/w/256/h/256/breakfast-icon.image?',
+        'Sides' : '//imageserver.microswebhotel.com/global_tenant/get/w/128/h/128/french-fries-icon.image?'
+    };
+    
+    $.each(menuArrayMap, function(key, value) {
+        if(key==activeMenuItem){
+            $('.product-img-container img').attr('src',value);
+        }
+     });
+    /*Review and checkout Qty Simple Basket items list component*/
+    $('.qty select').attr('disabled', 'disabled');
+   
+    /*Background images left and right*/
+    $('#wrap').after('<div class="clear" id="Lbckg">&nbsp;</div><div id="Rbckg">&nbsp;</div>');
+    /*Triggers the Choose This Location btn on Search Lcoations page*/
+    $('.choose-location-btn').trigger("click");
+});
+</script>
