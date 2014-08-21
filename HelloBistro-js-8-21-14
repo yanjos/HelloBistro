@@ -1,7 +1,13 @@
 <script>
 $(function() {
+   /*YPA 8-21-14*/ 
+        /*Restricts the special instructions fields to 16 characters*/
+	$('.menu-list-item-specialinstructions input').attr('maxlength', '16');
+        /*Changes the title of the Order Status component that is not a label*/
+        $('.ui-res-order-location-container .title').text('Store Location:');
+    
     /*OS 8/12/14 - Show/Hide Pickup/Delivery Areas on search locations page*/
-    $(".order-option-selections input[name='order-option-selection']").click(function() {
+    /*$(".order-option-selections input[name='order-option-selection']").click(function() {
 
         if ($('input:radio[name=order-option-selection]:checked').val() == "pickup"){
             $('.order-option-criteria.pickup').show();
@@ -10,7 +16,7 @@ $(function() {
             $('.order-option-criteria.pickup').hide();
             $('.order-option-criteria.delivery').show();
         }
-    });
+    });*/
 
     /*Adds/Removes class based on mouseenter and mouseleave- reusable*/
     function inputAction(x, y, z){
@@ -34,21 +40,21 @@ $(function() {
         $('.custom-loggedin-txt-container').css('width','70%');
     }
   /*Menu Page - adds on click to go to specific product category*/
-  $('.menu-list-item.ui-res-menu-list-display-cat-as-btns').each(function(){
+  /*$('.menu-list-item.ui-res-menu-list-display-cat-as-btns').each(function(){
 	var x = $(this).attr('data-productid');
 	$('#menu-item-' + x).on('click',function(){window.location = '../landing/menu.jsp?CAT1=' + x;});
-  });
+  });*/
   /*For the custom menu component. Show only when on menu page*/
-  if ($('.selected-menu-category-item-title').text() != 'OUR MENU')
+  /*if ($('.selected-menu-category-item-title').text() != 'OUR MENU')
    { 
      $('.custom-menu').show();
-   }
+   }*/
    /*Adds a class to Dropdown menu component to change sprite category image*/
-   var activeMenuItemTD = $('.ui-res-dropdown-menu-selected-category-title-container td:first-child, .selected-menu-category-item-title').text().toLowerCase();
-   $('.ui-res-dropdown-menu-selected-category-title-container td:first-child, .selected-menu-category-item-title').addClass(activeMenuItemTD);
+   /*var activeMenuItemTD = $('.ui-res-dropdown-menu-selected-category-title-container td:first-child, .selected-menu-category-item-title').text().toLowerCase();
+   $('.ui-res-dropdown-menu-selected-category-title-container td:first-child, .selected-menu-category-item-title').addClass(activeMenuItemTD);*/
    
    /*changes the image src of the product-img-container custom component based on the title*/
-    var activeMenuItem = $('.ui-res-dropdown-menu-selected-category-title-container td:first-child').text();
+    /*var activeMenuItem = $('.ui-res-dropdown-menu-selected-category-title-container td:first-child').text();
     var menuArrayMap = {
         'Burgers' : '//imageserver.microswebhotel.com/global_tenant/get/w/256/h/256/burgericon.image?',
         'Salads' : '//imageserver.microswebhotel.com/global_tenant/get/w/256/h/256/salad-icon.image?',
@@ -60,13 +66,13 @@ $(function() {
         if(key==activeMenuItem){
             $('.product-img-container img').attr('src',value);
         }
-     });
+     });*/
     /*Review and checkout Qty Simple Basket items list component*/
     $('.qty select').attr('disabled', 'disabled');
    
     /*Background images left and right*/
     $('#wrap').after('<div class="clear" id="Lbckg">&nbsp;</div><div id="Rbckg">&nbsp;</div>');
     /*Triggers the Choose This Location btn on Search Lcoations page*/
-    $('.choose-location-btn').trigger("click");
+    /*$('.choose-location-btn').trigger("click");*/
 });
 </script>
