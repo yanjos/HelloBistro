@@ -1,0 +1,7 @@
+$(document).ready(function () {
+    setTimeout(function(){ 
+		$('#txtFavoriteName').attr('maxlength', '16');
+		$('#btnApplyFavoriteOrder').text('Limit 16 characters');
+		$('[for="txtFavoriteName"]').text('Add this to my favorite orders'); 
+	}, 500);
+});
