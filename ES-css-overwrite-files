@@ -16,3 +16,8 @@ div#ResourceImage:before {
 #EventDetails div.editor-field.required {
 	width: 10px !important;
 }
+.custom-order-limit-label {
+	float: left;
+	width: 165px;
+	text-align: left;
+}
