@@ -1,7 +1,17 @@
+/*Each area corresponds to a page within ES site. Jquery code will exist in separate modules in each page*/
+<script>
 $(document).ready(function () {
+	/*Checkout page*/
     setTimeout(function(){ 
+		/*Adds max character length to favorites input field*/
 		$('#txtFavoriteName').attr('maxlength', '16');
+		/*replaces 1st Favorite order label text*/
 		$('#btnApplyFavoriteOrder').text('Limit 16 characters');
+		/*replaces 2nd favorite order label text*/
 		$('[for="txtFavoriteName"]').text('Add this to my favorite orders'); 
+		/*Group Order Creation page*/
+		$('<div class="custom-order-limit-label">Please enter whole dollars, without decimals</div>').insertAfter($('#OrderLimit').closest('.editor-field').siblings('.required'));
 	}, 500);
+	
 });
+</script>
