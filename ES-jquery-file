@@ -10,8 +10,17 @@ $(document).ready(function () {
 		/*replaces 2nd favorite order label text*/
 		$('[for="txtFavoriteName"]').text('Add this to my favorite orders'); 
 		
-		/*Group Order Creation page*/
+		/**Group Order Creation page**/
+		/*Adds label next to Order limit*/
 		$('<div class="custom-order-limit-label">Please enter whole dollars, without decimals</div>').insertAfter($('#OrderLimit').closest('.editor-field').siblings('.required'));
+		
+		/**My Profile page**/
+		/*Disables the email account field*/
+		$('#ContactEmailPrimary').attr('disabled','disabled');
+		
+		/**Confirmation Page**/
+		/*Hides First Order Reference number*/
+		$('[for="StoreAddressLine2"]').next('br').next('[for="OrderReference Number"]').hide();$('[for="StoreAddressLine2"]').next('br').hide();
 	}, 500);
 	
 });
