@@ -1,3 +1,8 @@
+/*Firefox fix for disabled elements*/
+input[disabled], select[disabled], textarea[disabled] {
+    background-color: #ccc;
+}
+
 /*Home page*/
 div#ResourceImage:before {
        content: "Choose Pickup or Delivery";
@@ -21,4 +26,5 @@ div#ResourceImage:before {
 	width: 165px;
 	text-align: left;
 }
+
 
