@@ -1,3 +1,7 @@
+/*Home page*/
+div#ResourceImage:before {
+       content: "Choose Pickup or Delivery";
+}
 /*Checkout page*/
 .EditModebasketCheckOut:before {
 	content: " Ready to checkout? You will have 10 minutes to complete your order once you click the checkout button. For security purposes, your cart will reset after 10 minutes on the checkout screen." !important;
@@ -17,3 +21,4 @@
 	width: 165px;
 	text-align: left;
 }
+
