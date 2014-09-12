@@ -21,7 +21,7 @@ $(document).ready(function () {
 		/**Confirmation Page**/
 		/*Hides First Order Reference number*/
 		$('[for="StoreAddressLine2"]').next('br').next('[for="OrderReference Number"]').hide();$('[for="StoreAddressLine2"]').next('br').hide();
-	}, 500);
+	}, 1000);
 	
 });
 </script>
