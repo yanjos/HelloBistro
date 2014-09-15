@@ -1,10 +1,13 @@
 <script>
 $(function() {
+   /*YPA 9-15-14*/
+        /*Menu Page updating of order status component labels*/
+        $('.location-title-container .title').text('Address:');
    /*YPA 8-21-14*/ 
         /*Restricts the special instructions fields to 16 characters*/
 	$('.menu-list-item-specialinstructions input').attr('maxlength', '16');
         /*Changes the title of the Order Status component that is not a label*/
-        $('.ui-res-order-location-container .title').text('Store Location:');
+        /*$('.ui-res-order-location-container .title').text('Store Location:');*/
     
     /*OS 8/12/14 - Show/Hide Pickup/Delivery Areas on search locations page*/
     /*$(".order-option-selections input[name='order-option-selection']").click(function() {
