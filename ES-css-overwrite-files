@@ -28,6 +28,7 @@ div#ResourceImage:before {
        font-size: 11px;
        line-height: 12px;
 }
+
 form#CreateNewEvent:before {
         content: "* The form should not contain any special characters, symbols, or punctuation.";
         display: block;
@@ -35,6 +36,14 @@ form#CreateNewEvent:before {
         font-size: 12px;
         font-style: italic;
 }
+/*Confirmation page*/
+label[for="StoreAddressLine2"] {
+       width: 150px;
+       display: block;
+}
+
+
+
 
 
 
