@@ -7,6 +7,11 @@ input[disabled], select[disabled], textarea[disabled] {
 div#ResourceImage:before {
        content: "Choose Pickup or Delivery";
 }
+/*Menu Page*/
+#CMProductList .SpecialIns {
+    border-top: dashed 1px #ccc;
+}
+
 /*Checkout page*/
 .EditModebasketCheckOut:before {
 	content: " Ready to checkout? You will have 10 minutes to complete your order once you click the checkout button. For security purposes, your cart will reset after 10 minutes on the checkout screen." !important;
@@ -41,9 +46,3 @@ label[for="StoreAddressLine2"] {
        width: 150px;
        display: block;
 }
-
-
-
-
-
-
