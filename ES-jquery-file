@@ -12,7 +12,7 @@ $(document).ready(function () {
 		
 		/**Group Order Creation page**/
 		/*Adds label next to Order limit*/
-		$('<div class="custom-order-limit-label">Please enter whole dollars, without decimals</div>').insertAfter($('#OrderLimit').closest('.editor-field').siblings('.required'));
+		$('<div class="custom-order-limit-label">This amount is the maximum for your entire order, not a per-person limit. Please enter whole dollars, without decimals.</div>').insertAfter($('#OrderLimit').closest('.editor-field').siblings('.required'));
 		
 		/**My Profile page**/
 		/*Disables the email account field*/
