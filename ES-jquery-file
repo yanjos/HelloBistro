@@ -11,6 +11,8 @@ $(document).ready(function () {
 		$('[for="txtFavoriteName"]').text('Add this to my favorite orders'); 
 		
 		/**Group Order Creation page**/
+		/*Adds label next to event name*/
+		$('<div class="custom-event-name-label">Letters only, no numbers or special characters.</div>').insertAfter($('#EventName').closest('.editor-field').siblings('.required'));
 		/*Adds label next to Order limit*/
 		$('<div class="custom-order-limit-label">This amount is the maximum for your entire order, not a per-person limit. Please enter whole dollars, without decimals.</div>').insertAfter($('#OrderLimit').closest('.editor-field').siblings('.required'));
 		
