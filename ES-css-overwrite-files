@@ -56,7 +56,7 @@ font-style: italic;
 font-size: 12px;
 }
 
-#GuestsOrderStatusTable a {
+#GuestsOrderStatusTable tr td:first-child a{
 text-decoration: none;
 cursor: default;
 }
