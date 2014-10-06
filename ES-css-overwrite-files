@@ -49,7 +49,7 @@ label[for="StoreAddressLine2"] {
 
 /*My profile page*/
 #GuestsOrderInfoTitle:after {
-content: "Unlock a guest to be able to update/view that guest's order, or to delete that guest from the event.";
+content: "Unlock a guest to update/view that guest's order, or to delete that guest from the event.";
 display: block;
 font-weight: normal;
 font-style: italic;
@@ -60,3 +60,14 @@ font-size: 12px;
 text-decoration: none;
 cursor: default;
 }
+
+
+
+
+
+
+
+
+
+
+
