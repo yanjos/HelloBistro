@@ -3,13 +3,13 @@
     display:none !important;
 }
 
-.ui-btn-text {
+.PickUp .ui-btn-text {
     display: none !important;
 }
-.ui-btn-inner{
+.PickUp .ui-btn-inner{
    font-weight:bold;
 }
-.ui-btn-inner:after {
+.PickUp .ui-btn-inner:after {
     content: "Select Pick-up Time";
 }
 /*END fix for Store location pickup buttons*/
