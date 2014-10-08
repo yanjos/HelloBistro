@@ -1,3 +1,15 @@
+
+/*START back button img becomes clickable */
+a#BackCol {
+    display: block;
+}
+
+#BackCol img {
+    position: relative;
+    z-index: -1;
+}
+/*END back button img becomes clickable */
+
 /*START fix for Store location pickup buttons*/
 .left:first-child .PickUp{
     display:none !important;
@@ -13,3 +25,6 @@
     content: "Select Pick-up Time";
 }
 /*END fix for Store location pickup buttons*/
+
+
+
