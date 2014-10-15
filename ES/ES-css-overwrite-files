@@ -1,73 +1,35 @@
-/*Firefox fix for disabled elements*/
-input[disabled], select[disabled], textarea[disabled] {
-    background-color: #ccc;
+
+/*START back button img becomes clickable */
+
+#hdBack{
+	margin-top:0 !important;
+	margin-left:0 !important;
 }
 
-/*Home page*/
-div#ResourceImage:before {
-       content: "Choose Pickup or Delivery";
-}
-/*Menu Page*/
-#CMProductList .SpecialIns {
-    border-top: dashed 1px #ccc;
+a#BackCol {
+      display: block;
+      padding: 10px 20px;
 }
 
-/*Checkout page*/
-.EditModebasketCheckOut:before {
-	content: " Ready to checkout? You will have 10 minutes to complete your order once you click the checkout button. For security purposes, your cart will reset after 10 minutes on the checkout screen." !important;
-	display: block !important;
-	text-align: left !important;
+#BackCol img {
+    position: relative;
+    z-index: -1;
 }
-#btnApplyFavoriteOrder {
-	font-style: italic;
-}
+/*END back button img becomes clickable */
 
-/*Group Order Creation page*/
-#EventDetails div.editor-field.required {
-	width: 10px !important;
-}
-.custom-order-limit-label, .custom-event-name-label{
-       float: left;
-       width: 169px;
-       text-align: left;
-       font-size: 11px;
-       line-height: 12px;
+/*START fix for Store location pickup buttons*/
+.left:first-child .PickUp{
+    display:none !important;
 }
 
-form#CreateNewEvent:before {
-        content: "* The form should not contain any special characters, symbols, or punctuation.";
-        display: block;
-        text-align: left;
-        font-size: 12px;
-        font-style: italic;
+.PickUp .ui-btn-text {
+    display: none !important;
 }
-/*Confirmation page*/
-label[for="StoreAddressLine2"] {
-       width: 150px;
-       display: block;
+.PickUp .ui-btn-inner{
+   font-weight:bold;
 }
-
-/*My profile page*/
-#GuestsOrderInfoTitle:after {
-content: "Unlock a guest to update/view that guest's order, or to delete that guest from the event.";
-display: block;
-font-weight: normal;
-font-style: italic;
-font-size: 12px;
+.PickUp .ui-btn-inner:after {
+    content: "Select Pick-up Time";
 }
-
-#GuestsOrderStatusTable tr td:first-child a{
-text-decoration: none;
-cursor: default;
-}
-
-
-
-
-
-
-
-
-
-
+/*END fix for Store location pickup buttons*/
 
