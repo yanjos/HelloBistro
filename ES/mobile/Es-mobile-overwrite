@@ -1,7 +1,14 @@
 
 /*START back button img becomes clickable */
+
+#hdBack{
+	margin-top:0 !important;
+	margin-left:0 !important;
+}
+
 a#BackCol {
-    display: block;
+      display: block;
+      padding: 10px 20px;
 }
 
 #BackCol img {
@@ -25,6 +32,4 @@ a#BackCol {
     content: "Select Pick-up Time";
 }
 /*END fix for Store location pickup buttons*/
-
-
 
