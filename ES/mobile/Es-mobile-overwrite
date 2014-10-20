@@ -33,3 +33,10 @@ a#BackCol {
 }
 /*END fix for Store location pickup buttons*/
 
+/*START fix to hide total header and price column in cart*/
+.cartGrid th:nth-child(4), .cartGrid td:nth-child(3) {
+    display: none;
+}
+/*END fix to hide price column in cart*/
+
+
